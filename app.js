@@ -16,11 +16,11 @@ app.use(
 app.use(bodyParser.json());
 
 // Routes
-import category from "./routes/categorieRoutes.js";
-import product from "./routes/productRoutes";
+import categories from "./routes/categorieRoutes.js";
+import products from "./routes/productRoutes";
 
-app.use("/api/v1", category);
-app.use("/api/v1", product);
+app.use("/api/v1", categories);
+app.use("/api/v1", products);
 
 app.get("/", (req, res) => {
   return res.send("server is working");
