@@ -8,8 +8,8 @@ import {
 
 const router = express.Router();
 
-router.route("/getproduct").get(getProduct);
-router.route("/addproduct").post(addProduct);
+router.route("/product").get(getProduct);
+router.route("/add-product").post(addProduct);
 router.route("/product/:id").put(updateProduct).delete(deleteProduct);
 
 export default router;
