@@ -9,7 +9,7 @@ export const getCategorie = catchAsyncError(async (req, res, next) => {
   });
 });
 
-export const addCategorie = catchAsyncError(async (req, res, next) => {
+export const addCategory = catchAsyncError(async (req, res, next) => {
   const { name } = req.body;
   db.query(
     "INSERT INTO categories (name) VALUES (?)",
@@ -20,7 +20,7 @@ export const addCategorie = catchAsyncError(async (req, res, next) => {
     }
   );
 });
-export const updateCategorie = catchAsyncError(async (req, res, next) => {
+export const updateCategory = catchAsyncError(async (req, res, next) => {
   const { id } = req.params;
   const { name } = req.body;
   db.query("UPDATE categories SET name = ? WHERE id = ?", [name, id], (err) => {
@@ -28,7 +28,7 @@ export const updateCategorie = catchAsyncError(async (req, res, next) => {
     res.json({ message: "Category updated successfully" });
   });
 });
-export const deleteCategorie = catchAsyncError(async (req, res, next) => {
+export const deleteCategory = catchAsyncError(async (req, res, next) => {
   const { id } = req.params;
   db.query("DELETE FROM categories WHERE id = ?", [id], (err) => {
     if (err) next(new ErrorHandler("Server Error", 500));
