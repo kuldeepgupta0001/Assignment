@@ -17,7 +17,6 @@ app.use(bodyParser.json());
 
 // Routes
 import category from "./routes/categorieRoutes.js";
-import category from "./routes/categorieRoutes.js";
 import product from "./routes/productRoutes";
 
 app.use("/api/v1", category);
