@@ -13,8 +13,6 @@ app.use(
   })
 );
 
-app.use(bodyParser.json());
-
 // Routes
 import categories from "./routes/categorieRoutes.js";
 import products from "./routes/productRoutes";
